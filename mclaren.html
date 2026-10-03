@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Team Guide | McLaren</title>
+  <!-- Link to the one external CSS file used by all 5 pages -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- The class on <body> changes the team colours in style.css -->
+<body class="mclaren">
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <h1>F1 Team Guide</h1>
+    <p>McLaren Racing - Papaya Power</p>
+  </header>
+
+  <!-- ============ NAVIGATION BAR (same on every page) ============ -->
+  <nav>
+    <a href="index.html">Ferrari</a>
+    <a href="mercedes.html">Mercedes</a>
+    <a href="redbull.html">Red Bull</a>
+    <a href="mclaren.html" class="active">McLaren</a>
+    <a href="williams.html">Williams</a>
+  </nav>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main>
+
+    <!-- Intro section: text on one side, picture on the other (flexbox) -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>McLaren</h2>
+        <p>
+          McLaren was founded in 1963 by Bruce McLaren, a racing driver from New Zealand. The team is based at the McLaren Technology Centre in Woking, England, and it is easy to spot on the track because of its bright papaya orange colour.
+        </p>
+        <p>
+          McLaren is one of the most successful teams in F1 history, with 10 Constructors' Championships, second only to Ferrari. The team won back-to-back titles in 2024 and 2025, ending a long wait since its previous title in 1998.
+        </p>
+      </div>
+      <div class="hero-img">
+        <img src="images/mclaren-car.jpg" alt="A papaya orange McLaren Formula 1 car on track">
+      </div>
+    </section>
+
+    <!-- Key facts: CSS Grid layout (display: grid) -->
+    <section>
+      <h2>Key Facts</h2>
+      <div class="facts-grid">
+        <div class="fact">
+          <h3>FOUNDED</h3>
+          <p>1963</p>
+        </div>
+        <div class="fact">
+          <h3>BASE</h3>
+          <p>Woking, England</p>
+        </div>
+        <div class="fact">
+          <h3>CONSTRUCTORS' TITLES</h3>
+          <p>10</p>
+        </div>
+        <div class="fact">
+          <h3>TEAM COLOUR</h3>
+          <p>Papaya Orange</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- History and legends -->
+    <section>
+      <h2>Legends and History</h2>
+      <p>
+        The 1980s and early 1990s were McLaren's golden era. Ayrton Senna and Alain Prost together won six drivers' titles for the team between 1985 and 1991. Mika Hakkinen won two titles in 1998 and 1999, and Lewis Hamilton won his first title with McLaren in 2008.
+      </p>
+      <p>
+        In 2025, Lando Norris and Oscar Piastri helped McLaren secure its 10th constructors' title at the Singapore Grand Prix, with six rounds still left on the calendar, while the two team-mates kept fighting each other for the drivers' championship.
+      </p>
+      <img class="wide-img" src="images/mclaren-podium.jpg" alt="Lando Norris and Oscar Piastri shake hands in the McLaren garage after a P1 finish">
+    </section>
+
+    <!-- External links -->
+    <section>
+      <h2>Learn More</h2>
+      <p>Want to read more about McLaren? These external websites are a good place to start:</p>
+      <ul class="link-list">
+        <li><a href="https://www.mclaren.com/racing/" target="_blank" rel="noopener">McLaren Racing (official site)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/McLaren" target="_blank" rel="noopener">McLaren on Wikipedia</a></li>
+        <li><a href="https://www.formula1.com/en/teams" target="_blank" rel="noopener">All F1 teams on Formula1.com</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p>&copy; 2026 F1 Team Guide</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Team Guide | Red Bull</title>
+  <!-- Link to the one external CSS file used by all 5 pages -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- The class on <body> changes the team colours in style.css -->
+<body class="redbull">
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <h1>F1 Team Guide</h1>
+    <p>Red Bull Racing - Giving You Wings</p>
+  </header>
+
+  <!-- ============ NAVIGATION BAR (same on every page) ============ -->
+  <nav>
+    <a href="index.html">Ferrari</a>
+    <a href="mercedes.html">Mercedes</a>
+    <a href="redbull.html" class="active">Red Bull</a>
+    <a href="mclaren.html">McLaren</a>
+    <a href="williams.html">Williams</a>
+  </nav>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main>
+
+    <!-- Intro section: text on one side, picture on the other (flexbox) -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Red Bull Racing</h2>
+        <p>
+          Red Bull Racing was created in 2005 when the energy drink company Red Bull bought the Jaguar F1 team. The team is based in Milton Keynes, England, and is known for its bold, playful style and its clever aerodynamic designs. Its dark blue cars quickly went from being newcomers to title contenders.
+        </p>
+        <p>
+          Sebastian Vettel gave the team its first big success by winning four drivers' championships in a row from 2010 to 2013, and the team won four constructors' titles in the same years. Later, Max Verstappen became the team's star driver.
+        </p>
+      </div>
+      <div class="hero-img">
+        <img src="images/redbull-car.jpg" alt="A dark blue Red Bull Racing Formula 1 car with the Oracle and Red Bull logos">
+      </div>
+    </section>
+
+    <!-- Key facts: Flexbox layout (display: flex) -->
+    <section>
+      <h2>Key Facts</h2>
+      <div class="facts-flex">
+        <div class="fact">
+          <h3>ENTERED F1</h3>
+          <p>2005</p>
+        </div>
+        <div class="fact">
+          <h3>BASE</h3>
+          <p>Milton Keynes, England</p>
+        </div>
+        <div class="fact">
+          <h3>CONSTRUCTORS' TITLES</h3>
+          <p>6</p>
+        </div>
+        <div class="fact">
+          <h3>DRIVERS' TITLES</h3>
+          <p>8</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- History and legends -->
+    <section>
+      <h2>Legends and History</h2>
+      <p>
+        Max Verstappen became the youngest race winner in F1 history when he won the 2016 Spanish Grand Prix at the age of 18, and he won four drivers' championships in a row from 2021 to 2024. In 2023, Red Bull won 21 of the 22 races, one of the most dominant seasons ever.
+      </p>
+      <p>
+        Red Bull also runs a second team, now called Racing Bulls, which helps young drivers move up the ladder to F1. From 2026, the team has been building its own engines through Red Bull Powertrains, working together with Ford.
+      </p>
+      <img class="wide-img" src="images/redbull-podium.jpg" alt="Two Red Bull Racing drivers celebrate on the podium with champagne bottles">
+    </section>
+
+    <!-- External links -->
+    <section>
+      <h2>Learn More</h2>
+      <p>Want to read more about Red Bull? These external websites are a good place to start:</p>
+      <ul class="link-list">
+        <li><a href="https://www.redbullracing.com/" target="_blank" rel="noopener">Red Bull Racing (official site)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Red_Bull_Racing" target="_blank" rel="noopener">Red Bull Racing on Wikipedia</a></li>
+        <li><a href="https://www.formula1.com/en/teams" target="_blank" rel="noopener">All F1 teams on Formula1.com</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p>&copy; 2026 F1 Team Guide</p>
+  </footer>
+
+</body>
+</html>

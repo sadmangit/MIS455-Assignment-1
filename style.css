@@ -1,0 +1,270 @@
+/* ==========================================================
+   MIS 455 - Assignment 1: Basic HTML & CSS
+   Theme: F1 Team Guide (Ferrari, Mercedes, Red Bull, McLaren, Williams)
+   This is the single external stylesheet linked by all 5 pages.
+   ========================================================== */
+
+/* -----------------------------
+   Two different Google Fonts:
+   "Orbitron" -> headings and navigation (techy racing look)
+   "Roboto"   -> normal paragraph text
+   ----------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@400;500;700&display=swap');
+
+/* -----------------------------
+   Team colours
+   Each page has a class on <body> (ferrari, mercedes, etc.)
+   that changes --accent and --accent2 for that team.
+   ----------------------------- */
+body.ferrari  { --accent: #e10600; --accent2: #ffd400; }
+body.mercedes { --accent: #00d2be; --accent2: #c0c4c8; }
+body.redbull  { --accent: #3a5bff; --accent2: #e30613; }
+body.mclaren  { --accent: #ff8000; --accent2: #47c7fc; }
+body.williams { --accent: #3d8bff; --accent2: #ffffff; }
+
+/* -----------------------------
+   Basic reset
+   ----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;  /* Google Font #2 */
+  font-size: 1rem;                    /* font-size */
+  color: #e8e8e8;                     /* color */
+  background-color: #0e0e12;          /* background-color: dark, like a night race */
+  line-height: 1.7;                   /* line-height */
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif; /* Google Font #1 */
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+header {
+  background-color: #000000;
+  text-align: center;                       /* text-align */
+  padding: 25px 10px;                       /* padding */
+  border-bottom: 5px solid var(--accent);   /* border */
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-top: 5px;
+}
+
+/* ==========================================================
+   NAVIGATION BAR (same on every page)
+   ========================================================== */
+nav {
+  display: flex;                 /* flexbox: puts the links in one row */
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #1a1a20;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);   /* box-shadow */
+}
+
+nav a {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  color: #ffffff;
+  padding: 15px 22px;
+  border-bottom: 3px solid transparent;
+}
+
+/* Hover effect: link gets the team colour */
+nav a:hover {
+  background-color: #2a2a33;
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+
+/* The link for the page you are currently on */
+nav a.active {
+  background-color: var(--accent);
+  color: #000000;
+}
+
+/* ==========================================================
+   MAIN CONTENT
+   ========================================================== */
+main {
+  max-width: 1000px;
+  margin: 0 auto;         /* margin: centres the content */
+  padding: 30px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  border-left: 6px solid var(--accent);
+  padding-left: 12px;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* ==========================================================
+   HERO SECTION - uses FLEXBOX (text on the left, picture on the right)
+   ========================================================== */
+.hero {
+  display: flex;                 /* display: flex */
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  background-color: #1a1a20;
+  border: 1px solid #333340;     /* border */
+  border-radius: 12px;           /* border-radius */
+  padding: 25px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+  flex: 1 1 320px;
+}
+
+.hero-img {
+  flex: 1 1 320px;
+}
+
+.hero-img img {
+  width: 100%;                   /* width */
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid var(--accent);
+  object-fit: cover;
+  max-height: 340px;
+}
+
+/* Second picture on each page (the real podium photo) */
+.wide-img {
+  width: 100%;                   /* width */
+  height: 420px;                 /* height - tall enough that portrait photos aren't squeezed */
+  object-fit: contain;           /* show the whole photo, never crop out the drivers */
+  background-color: #000000;
+  border-radius: 12px;
+  border: 3px solid var(--accent);
+  margin-top: 10px;
+}
+
+/* ==========================================================
+   KEY FACTS - two different layouts
+   .facts-flex = Flexbox (used on Ferrari, Red Bull, Williams pages)
+   .facts-grid = CSS Grid (used on Mercedes and McLaren pages)
+   ========================================================== */
+.facts-flex {
+  display: flex;                 /* flexbox row of boxes */
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.facts-grid {
+  display: grid;                 /* CSS grid: 2 columns x 2 rows */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.fact {
+  flex: 1 1 200px;
+  background-color: #1a1a20;
+  border: 1px solid #333340;
+  border-top: 4px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  padding: 18px;
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+/* Hover effect: the box lifts up a little */
+.fact:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.fact h3 {
+  font-size: 0.8rem;
+  color: #9a9aa5;
+  margin-bottom: 8px;
+}
+
+.fact p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   LINKS LIST
+   ========================================================== */
+ul.link-list {
+  margin-left: 25px;
+}
+
+ul.link-list li {
+  margin-bottom: 8px;
+}
+
+ul.link-list a:hover {
+  color: var(--accent2);
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  background-color: #000000;
+  color: #9a9aa5;
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 0.9rem;
+  border-top: 3px solid var(--accent);
+}
+
+/* ==========================================================
+   Small screens
+   ========================================================== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .facts-grid {
+    grid-template-columns: 1fr;   /* one column on phones */
+  }
+}
